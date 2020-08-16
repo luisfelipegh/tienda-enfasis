@@ -1,7 +1,9 @@
-import Item
+from Item import Item 
 
-class CarritoDeCompra:
-    items = []
+class CarritoDeCompras:
+    
+    def __init__(self):
+        self.items = []
 
     def agregar_item(self, producto, cantidad):
         self.items.append(Item(producto,cantidad))
@@ -10,6 +12,7 @@ class CarritoDeCompra:
         total = 0
         
         for item in self.items:
-           total += item.calcular_total()
+            total = total + item.calcular_total()
     
         return total
+        

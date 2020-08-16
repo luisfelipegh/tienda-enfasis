@@ -2,8 +2,8 @@ class Producto:
     sku = ""
     nombre = ""
     descripcion = ""
-    unidades_disponibles = ""
-    precio = ""
+    unidades_disponibles = 0
+    precio = 0
 
     def __init__(self, sku, nombre, descripcion, unidades_disponibles, precio):
         self.sku = sku
