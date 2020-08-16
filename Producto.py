@@ -13,8 +13,11 @@ class Producto:
         self.precio = precio
     
     def tiene_unidades_disponibles(self, cantidad):
-        capacidad = True
-        return capacidad
+
+        if cantidad > self.unidades_disponibles:
+            return False
+
+        return True
 
     def get_precio(self):
-        print (self.precio)
+        return self.precio
