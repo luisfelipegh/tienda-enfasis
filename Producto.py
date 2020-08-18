@@ -21,3 +21,6 @@ class Producto:
 
     def get_precio(self):
         return self.precio
+    
+    def get_sku(self):
+        return self.sku

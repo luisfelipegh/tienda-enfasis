@@ -7,5 +7,11 @@ class Item:
         self.producto = producto
         
     def calcular_total(self):
-        #agregar los condicionales o refactorizacion 
-        return self.producto.get_precio() * self.cantidad
+        
+        if (self.producto.get_sku()[0:2].upper() == 'EA'):
+            return self.producto.get_precio() * self.cantidad
+        if (self.producto.get_sku()[0:2].upper() == 'WE'):
+            return self.producto.get_precio() * self.cantidad
+        if (self.producto.get_sku()[0:2].upper() == 'SP'):
+            return self.producto.get_precio() * self.cantidad
+        return 0
